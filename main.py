@@ -12,8 +12,8 @@ class Loan:
         self.risk_factor = risk_factor
 
     def calculate_interest_rate(self):
-        base_rate = 0.05  # Base interest rate
-        risk_premium = self.risk_factor * 0.02  # Additional interest based on risk factor
+        base_rate = 0.05  
+        risk_premium = self.risk_factor * 0.02  
         interest_rate = base_rate + risk_premium
         return interest_rate
 
