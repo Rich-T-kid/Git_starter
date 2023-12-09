@@ -57,9 +57,6 @@ def assign_liquidity_ratio_rating(liquidity_ratio):
         return 1  # Neutral
     else:
         return 1.2  # Bad
-# Assigns a rating based on the liquidity ratio.
-def assign_liquidity_ratio_rating(liquidity_ratio):
-    return liquidity_ratio
     
 # Assigns a rating based on the business credit score.
 def assign_business_credit_rating(business_credit):
