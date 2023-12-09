@@ -65,7 +65,10 @@ class LoanManager:
 
 def is_significant_change(current_value, previous_value, threshold=10):
     # Check if the difference between current and previous values is greater than or equal to the threshold
-    return abs(current_value - previous_value) >= threshold
+    change = abs(current_value - previous_value)
+    if change >= threshold:
+        print(f"There is a significant change of {change} from {previous_value} to {current_value}.")
+    return change >= threshold
 
 # Function to get timestamp
 def timestamp():
