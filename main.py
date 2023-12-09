@@ -4,6 +4,36 @@ def main():
   pass
 import json
 from datetime import datetime, timedelta
+ # Get financial inputs from the user.
+    net_income = get_user_input("Enter Net Income: $")
+    net_sales = get_user_input("Enter Net Sales: $")
+    current_assets = get_user_input("Enter Current Assets: $")
+    current_liabilities = get_user_input("Enter Current Liabilities: $")
+
+    # Calculate financial ratios.
+    net_profit_margin = calculate_net_profit_margin(net_income, net_sales)
+    liquidity_ratio = calculate_liquidity_ratio(current_assets, current_liabilities)
+
+    # Get credit scores from the user.
+    business_credit = get_business_credit()
+    personal_credit = get_personal_credit()
+
+    # Assign ratings based on financial ratios and credit scores.
+    net_profit_margin_rating = assign_net_profit_margin_rating(net_profit_margin)
+    liquidity_ratio_rating = assign_liquidity_ratio_rating(liquidity_ratio)
+    business_credit_rating = assign_business_credit_rating(business_credit)
+    personal_credit_rating = assign_personal_credit_rating(personal_credit)
+
+    # Display results with ratings.
+    print("\nResults with Ratings:")
+    print(f"Net Profit Margin Ratio: {net_profit_margin:.2%} - Rating: {net_profit_margin_rating}")
+    print(f"Liquidity Ratio: {liquidity_ratio:.2} - Rating: {liquidity_ratio_rating}")
+    print(f"Business Credit Score: {business_credit} - Rating: {business_credit_rating}")
+    print(f"Personal Credit Score: {personal_credit} - Rating: {personal_credit_rating}")
+
+    # Evaluate loan eligibility and display the risk factor.
+    risk_factor = evaluate_loan_eligibility(net_profit_margin_rating, liquidity_ratio_rating, business_credit_rating, personal_credit_rating)
+    print("\nRisk Factor:", risk_factor)
 
 class Loan:
     def __init__(self, amount, duration, risk_factor) -> None:
