@@ -1,4 +1,3 @@
-# main file where app will actually run. 
 # Calculates and returns the net profit margin ratio.
 def calculate_net_profit_margin(net_income, net_sales):
     return net_income / net_sales
