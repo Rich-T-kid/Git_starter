@@ -3,21 +3,7 @@ import json
 from datetime import datetime
 from typing import Any
 import requests
-class User:
-    def __init__(self,id) -> None:
-        self.id = id
 
-    def construct(self):
-        creditScore = input("input credit Score")
-        AssetsValue = input("value of your Assets")
-        Liabilitys = input("value of liabilitys")
-        if self.riskRatio(creditScore,AssetsValue,Liabilitys) > 10:
-            pass
-
-    
-
-    def riskRatio(self,creditScore,assets,liabilitys):
-        pass
 
 class ClientData: # where data manipulation of user data will be done and returned
     def __init__(self) -> None:
